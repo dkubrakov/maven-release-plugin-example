@@ -16,6 +16,10 @@
 			<!-- http://localhost:8081/repository/<repository-name> -->
 			<url>http://localhost:8181/repository/api-release</url>
 		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8181/repository/api-release</url>
+		</snapshotRepository>
 	</distributionManagement>
 	<profiles>
 		<profile>
@@ -65,7 +69,7 @@
 						<configuration>
 							<serverId>nexus-releases</serverId>
 							<nexusUrl>http://localhost:8181/</nexusUrl>
-							<skipStaging>true</skipStaging>
+							<skipStaging>false</skipStaging>
 						</configuration>
 					</plugin>
 				</plugins>
